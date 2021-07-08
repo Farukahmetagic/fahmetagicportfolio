@@ -1,0 +1,415 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/5651980.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+}
+/* ------------------ DESKTOP VIEW NAVIGATION ------------*/
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: #323232;
+}
+
+.navtext{
+    color:#fff;
+}
+
+.navitem:hover{
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.navbarbrand{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing:0.1em
+}
+.iconBtn{
+    color: #fff;
+}
+/* ------------------ FOOTER ------------*/
+.footerdiv{
+    width: 100%;
+    height: 135px;
+    background-color: #323232;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+.copyright{
+    color:#fff;
+    font-weight: 100;
+}
+
+.footercontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ------------------ HOME PAGE ------------*/
+.homepagediv{  
+    margin-top: 150px;
+    width: 50%;
+    background-color:rgba(0, 0, 0, 0.37);
+    min-width: 420px;
+    text-align: center;
+    color: #fff;    
+    z-index: 1;
+}
+
+.hptitle{
+    font-weight: 300;
+    font-size: 32px; 
+}
+.hptext{
+    font-weight: 100;
+    font-size: 28px; 
+}
+
+.btn-contact{
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    padding: 0.75rem;
+    font-weight: 100;
+    font-size: 22px; 
+    color: #fff;
+    letter-spacing:0.07em;
+    z-index: 1;
+    background: none;
+}
+.btn-contact:hover{
+    background: rgba(255,255,255,0.2);
+    text-decoration: none;
+    color: #fff;
+}
+/* ------------------ MEDIA QUERY ------------*/
+@media only screen and (max-width: 600px) {
+    .homepagediv{
+        width: 100%;
+        min-width: 180px;
+        margin-top: 10px;
+    }
+    .aboutcontainer{
+        width: 100%;
+        min-width: 100%;
+    }
+    .typesOfServiceCol-3{
+        min-height: 1000px;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .projectsImgMobile{
+        width: 320px;
+    }
+}
+@media only screen and (max-width:1000px) {
+    .homepagediv{
+        min-width: 180px;
+        margin-top: 10px;
+    }
+    .aboutcontainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+        width: 100%;
+        min-width: 420px;
+        color: #fff;    
+        z-index: 1;
+    }
+    
+    .bio{
+        min-width: 100%;
+    }
+    .typesOfServiceCol-2{
+        height: 500px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .inputsContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .dmInfo{
+        flex-direction: column;
+    }
+}
+/* ------------------ mobile view navigation ------------*/
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    background-image: url(./images/menuPhoto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+.nav-menu.active {
+    top: 0;
+    opacity: 1;
+    transition: all 0.9s ease;
+    z-index: 1;
+}
+.menuBtn{
+    z-index: 11;
+}
+/* ------------------ PARTICLES (ANIMATION) ------------*/
+.tsparticles-canvas-el{
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -10 !important;
+}
+/* ------------------ ABOUT ------------*/
+.aboutcontainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 0 0 0;
+    padding: 0;
+    width: 100%;
+    min-width: 120px;
+    color: #fff;    
+    z-index: 1;
+}
+.bio{
+    background-color:rgba(0, 0, 0, 0.37);
+    width: 30%;
+}
+.biotext{
+    padding: 30px;
+}
+.abouttitle{
+    font-weight: 300;
+    font-size: 32px; 
+}
+.skillset{
+    margin-bottom: 35px;
+}
+.skillstext{
+    font-weight: 100;
+    font-size: 18px; 
+    margin: 0 20px 0 20px;
+}
+.bioprogressbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* ------------------ SERVICES ------------*/
+
+.servicescontainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+}
+.serviceTitle{
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.serText{
+    background-color:rgba(0, 0, 0, 0.37);
+    padding: 40px 15px 40px 15px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 18px;
+    margin-bottom: 30px; 
+    min-width: 300px;
+}
+.typesOfServiceCol-1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.service{
+    width: 230px;
+    height: 243px;
+    background-color:rgba(255, 255, 255, 0.78);
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 15px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s ease-in;
+}
+.service:hover{
+    width: 240px;
+    height: 253px;
+    transition: all 0.3s ease;
+}
+.serviceIcon{
+    color: #45C6C9;
+}
+.sTitle{
+    font-weight: 400;
+}
+
+/* ------------------ PROJECTS ------------*/
+ 
+.projectsContainer{
+    width: 100%;
+    max-height: 493px;
+    background-color:rgba(255, 255, 255, 0.78);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 70px;
+}
+.projectsImg{
+    max-width: 520px;
+}
+
+/* ------------------ CONTACT ------------*/
+
+.contactContainer{
+    width: 100%;
+    background-color: #324158;
+    opacity: 0.79;
+    color: #fff;
+    margin-top: 60px;
+}
+.inputsContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding: 0 10px 0 10px;
+    max-width: 740px;
+}
+.inputFields{
+    width: 100%;
+    margin-right: 30px;
+}
+.textField{
+    width: 100%;
+    height: 272px;    
+}
+.ContactTitle{
+    font-weight: 300;
+    padding-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+.inputsForm{
+    display: flex;
+    flex-direction: column;
+}
+hr.inputDivider{
+    border-top: 2px solid #1e293a;
+    width: 100%;
+}
+hr.inputsDivider{
+    border-top: 2px solid #1e293a;
+    width: 100%;
+    margin-top: 0;
+    padding-bottom: 50px;
+}
+.form-control{
+    background: none;
+    border: none;
+    outline: 0 !important;    
+    resize: none;
+    box-shadow: none !important;
+    color: #fff;
+    font-weight: 100;
+}
+.textArea{
+    height: 100% !important;
+    border-bottom: 2px solid #1e293a;
+    border-radius: 2px;
+}
+.form-control:focus{
+    background: transparent;
+    outline: none !important;
+    border: none;
+    color: #fff;
+    font-weight: 100;
+    resize: none;
+}
+.textArea:focus{
+    border-bottom: 2px solid #1e293a;
+    border-radius: 2px;
+}
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    font-weight: 100;
+    opacity: 1; /* Firefox */
+}
+.contact-btn{
+    margin: 12px 0 25px 0;
+    padding: 8px 0 8px 0;
+    width: 70%;
+    color: #fff;
+    background: rgba(30, 41, 58, 0.4);
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 200;
+    border: 1px solid #fff;
+    max-width: 340px;
+}
+.contact-btn:hover{
+    background-color: #1e293a;
+    transition: all 0.3s ease-in;
+}
+.dmContainer{
+    width: 100%;
+}
+.dmTitle{
+    font-weight: 300;
+}
+.dmWhatsapp{
+    color: #BADA55;
+}
+.dmGmail{
+    color:#FF0000;
+}
+.dmInfo{
+    /* max-width: 740px; */
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4em;
+    font-weight: 200;
+    margin-top: 35px;
+}
+.dmWh{
+    display: flex;
+    justify-content: center;
+}
+.dmLinkedIn{
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    font-weight: 200;
+}
