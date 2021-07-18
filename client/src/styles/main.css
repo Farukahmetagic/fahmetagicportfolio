@@ -15,7 +15,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-/* ------------------ DESKTOP VIEW NAVIGATION ------------*/
+/******************************** ------------------ DESKTOP VIEW NAVIGATION ------------***********************************************/
 .navbar{
     display: flex;
     justify-content: space-around;
@@ -24,6 +24,9 @@ body{
 
 .navtext{
     color:#fff;
+}
+.jsImg{
+    width: 50px;
 }
 
 .navitem:hover{
@@ -149,6 +152,9 @@ body{
     .dmInfo{
         flex-direction: column;
     }
+    .dmGmail{
+        margin-left: 0 !important;
+    }
 }
 /* ------------------ mobile view navigation ------------*/
 .nav-menu {
@@ -185,7 +191,7 @@ body{
     min-height: 100vh;
     z-index: -10 !important;
 }
-/* ------------------ ABOUT ------------*/
+/*********************************************************** ------------------ ABOUT ------------************************************************************/
 .aboutcontainer{
     display: flex;
     justify-content: space-around;
@@ -221,8 +227,12 @@ body{
     justify-content: space-between;
     margin-bottom: 20px;
 }
+.gitAbout{
+    font-size: 1.2em;
+    font-weight: 200;
+}
 
-/* ------------------ SERVICES ------------*/
+/************************************************* ------------------ SERVICES ------------************************************************************/
 
 .servicescontainer{
     display: flex;
@@ -289,14 +299,14 @@ body{
     max-width: 520px;
 }
 
-/* ------------------ CONTACT ------------*/
+/******************************** ------------------ CONTACT ------------*********************************************************/
 
 .contactContainer{
     width: 100%;
     background-color: #324158;
     opacity: 0.79;
     color: #fff;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 .inputsContainer{
     display: flex;
@@ -393,23 +403,23 @@ hr.inputsDivider{
     color: #BADA55;
 }
 .dmGmail{
+    margin-left: 30px;
     color:#FF0000;
 }
 .dmInfo{
-    /* max-width: 740px; */
     display: flex;
-    justify-content: space-around;
-    font-size: 1.4em;
-    font-weight: 200;
+    justify-content: center;
     margin-top: 35px;
 }
 .dmWh{
     display: flex;
     justify-content: center;
+    font-size: 1.3em;
+    font-weight: 200;
 }
 .dmLinkedIn{
-    display: flex;
-    justify-content: center;
-    font-size: 1.4em;
-    font-weight: 200;
+    color: #0e76a8;
+}
+.dmGitHub{
+    color: #000;
 }

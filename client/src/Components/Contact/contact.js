@@ -3,6 +3,7 @@ import React from 'react';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 function Contact() {
     return (
@@ -43,8 +44,11 @@ function Contact() {
                         <MailOutlineIcon className="dmGmail" fontSize="large" /><p>farukahmetagic94@gmail.com</p>
                     </div>
                 </div>
-                <div className="dmLinkedIn">
-                    <LinkedInIcon className="dmGmail" fontSize="large" /><p>https://www.linkedin.com/in/faruk-ahmetagic-5b7a55203</p>
+                <div className="dmWh">
+                    <LinkedInIcon className="dmLinkedIn" fontSize="large" /><p>https://www.linkedin.com/in/<wbr/>faruk-ahmetagic-5b7a55203</p>
+                </div>
+                <div className="dmWh">
+                    <GitHubIcon className="dmGitHub" fontSize="large" /><p>https://github.com<wbr/>/Farukahmetagic</p>
                 </div>
             </div>
         </div>
