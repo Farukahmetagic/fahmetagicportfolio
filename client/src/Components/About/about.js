@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import { Container } from 'react-bootstrap';
 import ProgressBar from 'react-percent-bar';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import CV from '../../data/FarukAhmetagic-CV.pdf'
 
 function About() {
     const [progressWidth, setProgressWidth] = useState("350px");
@@ -17,6 +18,10 @@ function About() {
     }
 
     useEffect(() => { setResponsiveness() })
+
+    const handleClick = () => {
+        window.open( CV , '_blank')
+    }
 
     return (
         <Container className="aboutcontainer">
@@ -33,10 +38,12 @@ function About() {
                     Please enjoy my portfolio, and feel
                     free to get in touch with any questions.
                 </p>
+                <div className="gitAbout">
+                    <a href="https://github.com/Farukahmetagic" className="ghLink" target="_blank" rel="noreferrer"><GitHubIcon className="ghAboutIcon" fontSize="large" /></a>
+                </div>
                 <br />
                 <br />
-                <button className="btn-contact">Download CV</button>
-                <br />
+                <button className="btn-cv" onClick={handleClick}>Download CV</button>
                 <br />
                 <br />
             </div>
@@ -47,10 +54,9 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">JavaScript</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={90}
-                        className="progressbar"
+                        className="progressbar1"
                         height="22px"
                         width={progressWidth}
                     />
@@ -59,8 +65,7 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">HTML&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={87}
                         className="progressbar"
                         height="22px"
@@ -70,8 +75,7 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">CSS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={85}
                         className="progressbar"
                         height="22px"
@@ -82,8 +86,7 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">React.js&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={75}
                         className="progressbar"
                         height="22px"
@@ -93,8 +96,7 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">Redux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={60}
                         className="progressbar"
                         height="22px"
@@ -104,8 +106,7 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">jQuery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={95}
                         className="progressbar"
                         height="22px"
@@ -115,8 +116,7 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">Bootstrap&nbsp;</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={95}
                         className="progressbar"
                         height="22px"
@@ -126,8 +126,7 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">Node.js&nbsp;&nbsp;&nbsp;</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={75}
                         className="progressbar"
                         height="22px"
@@ -137,8 +136,7 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">Express.js&nbsp;</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={75}
                         className="progressbar"
                         height="22px"
@@ -148,8 +146,7 @@ function About() {
                 <div className="bioprogressbar">
                     <p className="skillstext">MongoDB</p>
                     <ProgressBar
-                        colorShift={true}
-                        fillColor="rgba(255, 255, 255, 0.6)"
+                        fillColor="purple"
                         percent={60}
                         className="progressbar"
                         height="22px"
