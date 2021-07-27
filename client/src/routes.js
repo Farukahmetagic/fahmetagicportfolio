@@ -46,7 +46,9 @@ function Routes() {
                         <Route path="/about" component={About} />
                         <Route path="/services" component={Services} />
                         <Route path="/projects" component={Projects} />
-                        <Route path="/contact" component={Contact} />
+                        <Route path="/contact">
+                            <Contact windowsWidth={windowsWidth}/>
+                        </Route>
                         <Route path="/" component={Home} />
                     </Switch>
                 </MainLayout>
