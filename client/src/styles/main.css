@@ -19,21 +19,42 @@ body{
 .navbar{
     display: flex;
     justify-content: space-around;
-    background-color: #323232;
+    background-color: transparent;
+    margin: 0;
 }
-
 .navtext{
     color:#fff;
 }
 .jsImg{
     width: 50px;
 }
-
-.navitem:hover{
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+.listItem{
+    list-style-type: none;
+    background-color: transparent !important;
 }
-
+.navitem{
+    color: #f4f4f4;
+    text-decoration: none;    
+    text-transform: uppercase;
+    padding: 8px 20px 0 20px;
+    margin: 0 5px 0 5px;
+    border-top: 3px solid transparent;
+}
+.navitem:hover, .navitem:focus{
+    color: #fff;
+    background: transparent !important;
+    text-decoration: none;
+    border-top: 3px solid rgba(249, 180, 45,0.8);
+    transition: 0.4s ease-in-out;
+    
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px rgba(50,65,88) inset !important;
+}
 .navbarbrand{
     font-size: 40px;
     text-transform: uppercase;
@@ -76,27 +97,31 @@ body{
 .hptitle{
     font-weight: 300;
     font-size: 32px; 
+    color: rgba(249, 180, 45,1);
 }
 .hptext{
     font-weight: 100;
     font-size: 28px; 
+    color: rgba(249, 180, 45,1);
 }
 
 .btn-contact{
-    border: 1px solid #fff;
+    border: 1px solid rgba(249, 180, 45,1);
     text-transform: uppercase;
     padding: 0.75rem;
     font-weight: 100;
     font-size: 22px; 
-    color: #fff;
+    color:rgba(249, 180, 45,1);
     letter-spacing:0.07em;
     z-index: 1;
-    background: none;
+    background-color:transparent;
+    transition: all 0.2s ease-in;
 }
 .btn-contact:hover{
-    background: rgba(255,255,255,0.2);
+    background: rgba(249, 180, 45,0.8);
     text-decoration: none;
     color: #fff;
+    transition: all 0.3s ease-in;
 }
 /************************************************* ------------------ MEDIA QUERY ------------***************************************************/
 @media only screen and (max-width: 600px) {
@@ -352,6 +377,10 @@ body{
     padding: 0 10px 0 10px;
     max-width: 740px;
 }
+input:-webkit-autofill
+{
+ -webkit-text-fill-color: rgb(8, 175, 58) !important;
+}
 .inputFields{
     width: 100%;
     margin-right: 30px;
@@ -369,10 +398,7 @@ body{
     letter-spacing: 6px;
     color: rgb(0, 128, 38);
 }
-hr.inputDivider{
-    border-top: 2px solid #1e293a;
-    width: 100%;
-}
+
 hr.inputsDivider{
     border-top: 2px solid #1e293a;
     width: 100%;
@@ -401,6 +427,7 @@ hr.inputsDivider{
     outline: none !important;
     border: 0;
     border-bottom: 2px solid rgb(0, 128, 38);
+    transition: all 0.5s ease-in-out;
     color: rgb(8, 175, 58);
     font-weight: 100;
     resize: none;

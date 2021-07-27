@@ -77,13 +77,14 @@ function Contact({ windowsWidth }) {
                                     message: "Max 30 characters"
                                 }
                             })
-                            }
+                            }                           
                         />
                         <span className="error-message">
                             {errors.phoneNumber && errors.phoneNumber.message}
                         </span>
+
                         <input
-                            type="text"
+                            type="type"
                             id="phoneNumber"
                             name="phoneNumber"
                             className="form-control inputs"
@@ -95,6 +96,7 @@ function Contact({ windowsWidth }) {
                                 }
                             })
                             }
+                           
                         />
                         <span className="error-message">
                             {errors.email && errors.email.message}
@@ -113,6 +115,7 @@ function Contact({ windowsWidth }) {
                                 }
                             })
                             }
+                           
                         />
                         <span className="error-message">
                             {errors.subject && errors.subject.message}
@@ -131,6 +134,7 @@ function Contact({ windowsWidth }) {
                                 }
                             })
                             }
+                            
                         />
                     </div>
                     <div className="textField">

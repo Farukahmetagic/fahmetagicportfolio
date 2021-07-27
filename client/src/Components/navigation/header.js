@@ -21,11 +21,11 @@ function Header({ windowsWidth }) {
     }
     return text
   }
-
+  
   return (
     <>
       {textChanger()}
-      <nav className="navbar" style={{ background: "transparent" }}>
+      <nav className="navbar bg-dark">
         <Link to="/" className="navbarbrand d-flex align-items-center" style={{ fontFamily: "Roboto", color: "#fff", textDecoration: "none" }}>
           <img src={JS} alt="error" className="jsImg" />
           <img src={ReactImg} alt="error" className="jsImg" />
